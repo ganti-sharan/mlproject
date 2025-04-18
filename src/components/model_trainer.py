@@ -49,6 +49,8 @@ class ModelTrainer:
                 "AdaBoost Classifier" : AdaBoostRegressor()
             }
             
+            
+            
             model_report: dict  = evaluate_models(X_train, y_train, X_test, y_test, models)
             
             ## Getting the best model from the model_report
@@ -79,4 +81,4 @@ class ModelTrainer:
             
         except Exception as e:
             raise CustomException(e, sys)
-        
+
